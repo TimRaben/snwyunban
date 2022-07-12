@@ -60,9 +60,6 @@ module.exports.run = async (client, message, args) => {
                         .setAuthor("Snwy Discord")
                         .setFooter('Snwy - Staff Team');
 
-                    var staff = "996330423082819594";
-                    var person = message.author;
-
                     var vraag1 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
