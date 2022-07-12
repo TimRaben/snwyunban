@@ -103,7 +103,6 @@ module.exports.run = async (client, message, args) => {
 
                     settedParent.send(message.author);
                     settedParent.send(`${user}`);
-                    settedParent.send(embedParent);
                     settedParent.send(vraag1);
 
                     settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
