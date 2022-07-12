@@ -166,7 +166,7 @@ module.exports.run = async (client, message, args) => {
     })
 })
 
-                    settedParent.send(`Gelukt!`).then(msg => msg.delete({ timeout: 1000}));
+
 
                 })
 }
