@@ -58,7 +58,7 @@ module.exports.run = async (client, message, args) => {
                         .setTitle(`Unban Aanvraag - Snwy`)
                         .setDescription(`Hallo ${message.author.username}, Je hebt een Ban Verzoek aangevraagd, beantwoord de vragen hieronder zo eerlijk en uitgebreid mogelijk.`)
                         .setAuthor("Snwy Discord")
-                        .setFooter('Snwy - Staff Team')
+                        .setFooter('Snwy - Staff Team');
 
                     var staff = "996330423082819594";
                     var person = message.author;
@@ -66,42 +66,42 @@ module.exports.run = async (client, message, args) => {
                     var vraag1 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Wat is je Discord Naam + Tag")
+                        .setDescription("Wat is je Discord Naam + Tag");
                     
                     var vraag2 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Wanneer ben je ongeveer verbannen?")
+                        .setDescription("Wanneer ben je ongeveer verbannen?");
                     
                     var vraag3 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Waarom ben je verbannen?")
+                        .setDescription("Waarom ben je verbannen?");
 
                     var vraag4 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Wat is volgens jou de reden van je verbanning?")
+                        .setDescription("Wat is volgens jou de reden van je verbanning?");
 
                     var vraag5 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Waarom wil je weer in de discord Server?")
+                        .setDescription("Waarom wil je weer in de discord Server?");
 
                     var vraag6 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Wat ga je anders doen in tegenstelling tot de vorige keer?")
+                        .setDescription("Wat ga je anders doen in tegenstelling tot de vorige keer?");
 
                     var vraag7 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Ben je al eens eerder verbannen op onze Server?")
+                        .setDescription("Ben je al eens eerder verbannen op onze Server?");
 
                     var vraag8 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Wil je nog iets toevoegen?")
+                        .setDescription("Wil je nog iets toevoegen?");
 
 
                     settedParent.send(message.author);
