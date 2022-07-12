@@ -58,7 +58,7 @@ module.exports.run = async (client, message, args) => {
                         .setTitle(`Unban Aanvraag - Snwy`)
                         .setDescription(`Hallo ${message.author.username}, Je hebt een Ban Verzoek aangevraagd, beantwoord de vragen hieronder zo eerlijk en uitgebreid mogelijk.`)
                         .setAuthor("Snwy Discord")
-                        .setFooter("Snwy - Staff Team");
+                        .setFooter("Snwy - Staff Team")
 
                     var vraag1 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
