@@ -54,16 +54,11 @@ module.exports.run = async (client, message, args) => {
                         ADD_REACTIONS: true
                     });
 
-                    var embedParent = new discord.MessageEmbed()
-                        .setTitle(`Unban Aanvraag - Snwy`)
-                        .setDescription(`Hallo ${message.author.username}, Je hebt een Ban Verzoek aangevraagd, beantwoord de vragen hieronder zo eerlijk en uitgebreid mogelijk.`)
-                        .setAuthor("Snwy Discord")
-                        .setFooter("Snwy - Staff Team")
 
                     var vraag1 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Wat is je Discord Naam + Tag");
+                        .setDescription("Wat is je Discord Naam + Tag")
                     
                     var vraag2 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
