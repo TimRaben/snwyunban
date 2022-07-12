@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
         .setTitle("Unban Verzoek - Snwy Discord")
         .setAuthor("Snwy")
         .setDescription("Er word een verzoek aangemaakt, een ogenblik geduld alstublieft.")
-        .setFooter("Je word getagged in een kanaal...")
+        .setFooter("Je word getagged in een kanaal...");
 
     message.channel.send(meldinggemaaktembed)
 
