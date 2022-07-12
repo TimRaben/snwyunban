@@ -149,11 +149,7 @@ module.exports.run = async (client, message, args) => {
 
                                 var channel = message.guild.channels.cache.get("996337002943365121");
                                 channel.send(melding)
-                                const thread = await channel.threads.create({
-                                    name: 'Verzoek',
-                                    autoArchiveDuration: 1000000000,
-                                    reason: 'Unban Verzoek',
-                                });
+                                
 
 
                                 settedParent.bulkDelete(6).then(
