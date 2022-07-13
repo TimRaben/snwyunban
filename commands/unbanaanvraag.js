@@ -155,13 +155,6 @@ module.exports.run = async (client, message, args) => {
             await msg.react('✅');
             await msg.react('❌');
             message.delete();
-            melding.startThread({
-                name: `${user} Unban Verzoek`,
-                autoArchiveDuration: 10000,
-                type: 'GUILD_PUBLIC_THREAD'
-            });
-
-            
         }).catch(err => {
             console.log(err);
         });
