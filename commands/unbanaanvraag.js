@@ -96,6 +96,7 @@ module.exports.run = async (client, message, args) => {
                         .setDescription("Wil je nog iets toevoegen?");
 
 
+                    settedParent.send(`${user}`)
                     settedParent.send(vraag1);
 
                     settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
