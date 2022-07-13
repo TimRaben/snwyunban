@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
         .setTitle("Maak een keuze...")
         .setColor("PURPLE")
         .addField(`Goedkeuren:`, '✅', false)
-        .addField(`Afwijzen:`, "❌", false);
+        .addField("Afwijzen:", "❌", false);
 
     var redenEmbed = new discord.MessageEmbed()
         .setTitle("Vertel een Reden:")
@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
 
             message.channel.send(redenEmbed).then(msg => msg.delete({ timeout: 10000 }));
 
-            message.channel.awaitMessages(filter, {max:1, time: 10000}).then(collected => { 
+            message.channel.awaitMessages(filter, { max:1, time: 10000 }).then(collected => { 
 
                 var redenGoed = collected.first();
 
@@ -45,7 +45,6 @@ module.exports.run = async (client, message, args) => {
                     .addField("Wie:", `${unbanUser}`, false)
                     .addField("Reden:", `${redenGoed}`, false);
 
-                message.channek.send(`${unbanUser}`)
                 message.channel.send(antwoordGoed);
                 message.channel.bulkDelete(1);
                 message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: Goedgekeurd`);
