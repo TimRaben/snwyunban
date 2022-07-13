@@ -133,7 +133,9 @@ module.exports.run = async (client, message, args) => {
 
                                 var melding = new discord.MessageEmbed()
                                     .setTitle("Snwy Discord - Unban Aanvraag")
+                                    .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
                                     .setColor("RED")
+                                    .setTimestamp()
                                     .setDescription(`Zie hieronder het verzoek.\n\n**Discord Naam + Tag**\n${antwoord1}\n\n**Datum Verbanning (ongeveer):**\n${antwoord2}\n\n**Reden van Verbanning:**\n${antwoord3}\n\n**Volgens de Persoon de Reden:**\n${antwoord4}\n\n**Waarom wilt de persoon weer in de Server:**\n${antwoord5}\n\n**Wat ga je doen in tegenstelling tot de vorige keer:**\n${antwoord6}\n\n**Ben je al eerder verbannen op onze Server:**\n${antwoord7}\n\n**Toevoegingen:**\n${antwoord8}`)
 
 
