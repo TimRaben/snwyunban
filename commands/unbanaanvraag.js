@@ -59,46 +59,55 @@ module.exports.run = async (client, message, args) => {
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
                         .setDescription("Wat is je Discord Naam + Tag")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.");
                     
                     var vraag2 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
-                        .setDescription("Wanneer ben je ongeveer verbannen?");
+                        .setDescription("Wanneer ben je ongeveer verbannen?")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.");
                     
                     var vraag3 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.")
                         .setDescription("Waarom ben je verbannen?");
 
                     var vraag4 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.")
                         .setDescription("Wat is volgens jou de reden van je verbanning?");
 
                     var vraag5 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.")
                         .setDescription("Waarom wil je weer in de discord Server?");
 
                     var vraag6 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.")
                         .setDescription("Wat ga je anders doen in tegenstelling tot de vorige keer?");
 
                     var vraag7 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.")
                         .setDescription("Ben je al eens eerder verbannen op onze Server?");
 
                     var vraag8 = new discord.MessageEmbed()
                         .setTitle("Unban Aanvraag - Snwy")
                         .setColor("RED")
+                        .setFooter("Beantwoord de vraag zo eerlijk en uitgebreid mogelijk.")
                         .setDescription("Wil je nog iets toevoegen?");
 
 
                     settedParent.send(`Beste ${user}, u krijgt over een aantal secondes een vragenlijst van ons, we vragen je die zo eerlijk mogelijk te beantwoorden.`)
-
-                    settedParent.send(vraag1);
+                    setTimeout(function(){
+                        settedParent.send(vraag1);
+                    },3000); 
 
                     settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
                         var antwoord1 = antwoord.first();;
@@ -136,6 +145,7 @@ module.exports.run = async (client, message, args) => {
                                     .setTitle("Snwy Discord - Unban Aanvraag")
                                     .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
                                     .setColor("RED")
+                                    .setThumbnail(message.author.displayAvatarURL())
                                     .setTimestamp()
                                     .setDescription(`Zie hieronder het verzoek.\n\n**Discord Naam + Tag**\n${antwoord1}\n\n**Datum Verbanning (ongeveer):**\n${antwoord2}\n\n**Reden van Verbanning:**\n${antwoord3}\n\n**Volgens de Persoon de Reden:**\n${antwoord4}\n\n**Waarom wilt de persoon weer in de Server:**\n${antwoord5}\n\n**Wat ga je doen in tegenstelling tot de vorige keer:**\n${antwoord6}\n\n**Ben je al eerder verbannen op onze Server:**\n${antwoord7}\n\n**Toevoegingen:**\n${antwoord8}`)
 
@@ -152,7 +162,7 @@ module.exports.run = async (client, message, args) => {
 
 
                                 settedParent.bulkDelete(6).then(
-                                    settedParent.send("U heeft succesvol een Verzoek ingediend hij wordt zo spoedig mogelijk bekeken en beoordeelt, u hoort van ons.")
+                                    settedParent.send(":white_check_mark: **||** U heeft succesvol een Verzoek ingediend hij wordt zo spoedig mogelijk bekeken en beoordeelt, u hoort van ons.")
                                     
                                 )
                                 })
