@@ -96,7 +96,8 @@ module.exports.run = async (client, message, args) => {
                         .setDescription("Wil je nog iets toevoegen?");
 
 
-                    settedParent.send(`${user}`)
+                    settedParent.send(`Beste ${user}, u krijgt over een aantal secondes een vragenlijst van ons, we vragen je die zo eerlijk mogelijk te beantwoorden.`)
+
                     settedParent.send(vraag1);
 
                     settedParent.awaitMessages(s => s.author.id == message.author.id, { max: 1 }).then(antwoord => {
@@ -140,7 +141,13 @@ module.exports.run = async (client, message, args) => {
 
 
                                 var channel = message.guild.channels.cache.get("996337002943365121");
-                                channel.send(melding)
+                                channel.send(melding).then(async (msg) => {
+            await msg.react('✅');
+            await msg.react('❌');
+            message.delete();
+        }).catch(err => {
+            console.log(err);
+        });
                                 
 
 
