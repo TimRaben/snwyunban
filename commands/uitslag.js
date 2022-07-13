@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    var categoryID = "996332158627106866";
+    var categoryID = "996330238353092648";
 
     var unbanUser = message.guild.member(message.mentions.users.first());
 
