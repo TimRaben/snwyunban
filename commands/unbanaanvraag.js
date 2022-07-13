@@ -134,7 +134,7 @@ module.exports.run = async (client, message, args) => {
                                 var melding = new discord.MessageEmbed()
                                     .setTitle("Snwy Discord - Unban Aanvraag")
                                     .setColor("RED")
-                                    .setDescription(`Zie hieronder het verzoek.\n\n**Discord Naam + Tag**\n${antwoord1}\n**Datum Verbanning (ongeveer):**\n${antwoord2}\n**Reden van Verbanning:**\n${antwoord3}\n**Volgens de Persoon de Reden:**\n${antwoord4}\n**Waarom wilt de persoon weer in de Server:**\n${antwoord5}\n**Wat ga je doen in tegenstelling tot de vorige keer:**\n${antwoord6}\n**Ben je al eerder verbannen op onze Server:**\n${antwoord7}\n**Toevoegingen:**\n${antwoord8}`)
+                                    .setDescription(`Zie hieronder het verzoek.\n\n**Discord Naam + Tag**\n${antwoord1}\n\n**Datum Verbanning (ongeveer):**\n${antwoord2}\n\n**Reden van Verbanning:**\n${antwoord3}\n\n**Volgens de Persoon de Reden:**\n${antwoord4}\n\n**Waarom wilt de persoon weer in de Server:**\n${antwoord5}\n\n**Wat ga je doen in tegenstelling tot de vorige keer:**\n${antwoord6}\n\n**Ben je al eerder verbannen op onze Server:**\n${antwoord7}\n\n**Toevoegingen:**\n${antwoord8}`)
 
 
                                 var channel = message.guild.channels.cache.get("996337002943365121");
