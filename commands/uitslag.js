@@ -6,8 +6,6 @@ module.exports.run = async (client, message, args) => {
 
     var unbanUser = message.guild.member(message.mentions.users.first());
 
-    if (message.channel.parentID !== categoryID) return message.reply(":x: **||** Verzoeken kunnen alleen worden beoordeelt in het Verzoek Kanaal zelf, klein privacy puntje =)") && message.delete();
-
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply(":x: **||** Jij bent niet gemachtigd om een beoordeling te geven.") && message.delete();
 
     if (!unbanUser) return message.reply(":x: **||** Geef een geldig persoon op.") && message.delete();
