@@ -2,9 +2,9 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    var guild = '845678808857051146';
-    var user = args(1);
-    guild.members.unban(user);
+    var guilds = '845678808857051146';
+    var user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    guilds.members.unban(user);
     let successfullyembed = new Discord.MessageEmbed()
       .setTitle(`${member.tag} is succesvol geunbanned`)
       .setColor("#2C2F33");
