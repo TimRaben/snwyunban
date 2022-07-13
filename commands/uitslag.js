@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
     var kiesEmbed = new discord.MessageEmbed()
         .setTitle("Maak een keuze...")
         .setColor("PURPLE")
-        .addField(`Goedkeuren:`, "✅", false)
+        .addField(`Goedkeuren:`, '✅', false)
         .addField(`Afwijzen:`, "❌", false);
 
     var redenEmbed = new discord.MessageEmbed()
