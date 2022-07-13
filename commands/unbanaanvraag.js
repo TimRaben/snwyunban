@@ -154,11 +154,7 @@ module.exports.run = async (client, message, args) => {
                                 channel.send(melding).then(async (msg) => {
             await msg.react('✅');
             await msg.react('❌');
-            message.startThread({
-                name: `${user}-${message.createdTimestamp}`,
-                autoArchiveDuration: 60,
-                type: 'GUILD_PUBLIC_THREAD'
-            });
+            message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: In behandeling`);
             message.delete();
         }).catch(err => {
             console.log(err);

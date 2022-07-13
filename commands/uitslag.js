@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args) => {
 
                 message.channel.send(antwoordGoed);
                 message.channel.bulkDelete(1);
-                message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: Goedgekeurd`);
+                message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: Goedgekeurd `);
 
 
             })
@@ -67,7 +67,7 @@ module.exports.run = async (client, message, args) => {
                 message.channek.send(`${unbanUser}`)
                 message.channel.send(antwoordAf);
                 message.channel.bulkDelete(1);
-                message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: Afgewezen ❌`);
+                message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: Afgewezen `);
 
 
             })
