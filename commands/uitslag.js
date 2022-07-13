@@ -23,6 +23,8 @@ module.exports.run = async (client, message, args) => {
         .setColor("PURPLE")
         .addField(`Reden:`, 'Geef een reden op...', false);
 
+        const filter = m => m.content;
+
     message.channel.send(kiesEmbed).then(async msg => {
 
         message.delete();
