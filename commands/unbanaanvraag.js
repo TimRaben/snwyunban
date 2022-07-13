@@ -154,13 +154,12 @@ module.exports.run = async (client, message, args) => {
                                 channel.send(melding).then(async (msg) => {
             await msg.react('✅');
             await msg.react('❌');
-            message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: In behandeling`);
             message.delete();
         }).catch(err => {
             console.log(err);
         });
                                 
-
+        message.channel.setTopic(`**Persoon**: ${unbanUser} **Status**: In behandeling`);
 
                                 settedParent.bulkDelete(6).then(
                                     settedParent.send(":white_check_mark: **||** U heeft succesvol een Verzoek ingediend hij wordt zo spoedig mogelijk bekeken en beoordeelt, u hoort van ons.")
