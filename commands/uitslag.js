@@ -2,8 +2,8 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    var guild = '845678808857051146'
-    var user = `${args(1)}`
+    var guild = '845678808857051146';
+    var user = args(1);
     guild.members.unban(user);
     let successfullyembed = new Discord.MessageEmbed()
       .setTitle(`${member.tag} is succesvol geunbanned`)
