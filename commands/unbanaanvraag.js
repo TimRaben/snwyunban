@@ -32,7 +32,9 @@ module.exports.run = async (client, message, args) => {
         .setDescription("Er word een verzoek aangemaakt, een ogenblik geduld alstublieft.")
         .setFooter("Je word getagged in een kanaal...");
 
-    message.channel.send(meldinggemaaktembed)
+    message.channel.send(meldinggemaaktembed).then(msg => msg.delete({ timeout: 3000 }));
+    
+
 
     message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, { type: 'text' }).then(
         (createdChannel) => {
