@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(meldinggemaaktembed)
 
     setTimeout(function(){
-        bulkDelete(2)
+        message.channel.bulkDelete(2)
     },3000);
     
 
