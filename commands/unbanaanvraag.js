@@ -161,7 +161,7 @@ module.exports.run = async (client, message, args) => {
         });
                             
 
-                                settedParent.bulkDelete(6).then(
+                                settedParent.bulkDelete(20).then(
                                     settedParent.send(":white_check_mark: **||** U heeft succesvol een Verzoek ingediend hij wordt zo spoedig mogelijk bekeken en beoordeelt, u hoort van ons.")
                                     
                                 )
