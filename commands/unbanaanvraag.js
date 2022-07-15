@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
         .setDescription("Er word een verzoek aangemaakt, een ogenblik geduld alstublieft.")
         .setFooter("Je word getagged in een kanaal...");
 
-    message.channel.send(meldinggemaaktembed).then(msg => msg.delete({ timeout: 3000 }));
+    message.channel.send(meldinggemaaktembed).then(bulkDelete(2)({ timeout: 3000 }));
     
 
 
