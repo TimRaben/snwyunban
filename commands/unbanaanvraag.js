@@ -160,8 +160,7 @@ module.exports.run = async (client, message, args) => {
                                 channel.send(melding).then(async (msg) => {
             await msg.react('✅');
             await msg.react('❌');
-            channel.setTopic(`**Persoon**: ${user} **Status**: In behandeling`);
-            message.delete();
+            settedParent.setTopic(`**Persoon**: ${user} **Status**: In behandeling`);
         }).catch(err => {
             console.log(err);
         });
