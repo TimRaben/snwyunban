@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 
             message.channel.send(redenEmbed).then(msg => msg.delete({ timeout: 10000 }));
 
-            message.channel.awaitMessages(filter, { max:1, time: 10000 }).then(collected => { 
+            message.channel.awaitMessages(filter, { max:1, time: 60000 }).then(collected => { 
 
                 var redenGoed = collected.first();
 
