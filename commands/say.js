@@ -9,10 +9,10 @@ module.exports.run = async (client, message, args) => {
     if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("Geen perms");
 
     var embed = new discord.MessageEmbed()
-            .setTitle("Spijkenisse Roleplay")
+            .setTitle("Snwy Discord - Unban Systeem")
             .setDescription(`${args.slice(0).join(" ")}`)
-            .setColor("BLUE")
-            .setFooter(`${message.member.displayName} • Spijkenisse Roleplay • Alle Rechten Voorbehoud`)
+            .setColor("PURPLE")
+            .setFooter('Unban Systeem • Snwy Discord • Alle Rechten Voorbehoud')
             .setTimestamp();
 
         return message.channel.send(embed);       
